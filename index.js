@@ -1,7 +1,7 @@
 // Includes packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateLogo = require('./lib/generate-logo')
+const generateLogo = require('./lib/generate-logo')
 
 //Creates an array of questions for user input
 const questions = [
@@ -28,7 +28,6 @@ const questions = [
 //initializes the logo making process
 inquirer.prompt(questions)
     .then((data) => {
-        console.log(data)
-        // fs.writeFile('./examples/logo.svg', generateLogo(data), (err) => 
-        // err ? console.log(err) : console.log('Generated logo.svg'));
+        fs.writeFile('./examples/logo.svg', generateLogo(data), (err) => 
+        err ? console.log(err) : console.log('Generated logo.svg'));
     })
