@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "author": "Giselle Fuselier",
-  "license": "MIT",
+  "license": "",
   "dependencies": {
     "inquirer": "^8.2.4"
   },
