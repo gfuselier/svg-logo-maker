@@ -1,7 +1,7 @@
 // Includes packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateLogo = require('./lib/generate-logo')
+// const generateLogo = require('./lib/generate-logo')
 
 //Creates an array of questions for user input
 const questions = [
@@ -11,7 +11,7 @@ const questions = [
         message: 'Enter up to three characters for your logo text:',
     }, {
         type: 'input',
-        name: 'text-color',
+        name: 'textColor',
         message: 'What color text would you like?',
     },{
         type: 'list',
@@ -20,7 +20,7 @@ const questions = [
         choices: ['circle', 'triangle', 'square']
     },{
         type: 'input',
-        name: 'shape-color',
+        name: 'shapeColor',
         message: 'What color shape would you like?'
     }
 ]
@@ -28,6 +28,7 @@ const questions = [
 //initializes the logo making process
 inquirer.prompt(questions)
     .then((data) => {
-        fs.writeFile('./examples/logo.svg', generateLogo(data), (err) => 
-        err ? console.log(err) : console.log('Generated logo.svg'));
+        console.log(data)
+        // fs.writeFile('./examples/logo.svg', generateLogo(data), (err) => 
+        // err ? console.log(err) : console.log('Generated logo.svg'));
     })
