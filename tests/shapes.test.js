@@ -1,9 +1,7 @@
-// const shape = new Triangle();
-// shape.setColor("blue");
-// expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />');
-
+//Imports shape classes
 const { Circle, Triangle, Square } = require("../lib/shapes");
 
+//circle tests
 describe("Circle", () => {
   describe("Render", () => {
     it("should return a string for the corresponding SVG file with the given input when the colors are keywords", () => {
@@ -35,6 +33,7 @@ describe("Circle", () => {
   });
 })
 
+//triangle tests
 describe("Triangle", () => {
   describe("Render", () => {
     it("should return a string for the corresponding SVG file with the given input when the colors are keywords", () => {
@@ -66,6 +65,7 @@ describe("Triangle", () => {
     });
 });
 
+//square tests
 describe("Square", () => {
     describe("Render", () => {
       it("should return a string for the corresponding SVG file with the given input when the colors are keywords", () => {

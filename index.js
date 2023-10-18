@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateLogo = require('./lib/generate-logo')
-//const {join} = require('path')
 
 //Creates an array of questions for user input
 const questions = [
